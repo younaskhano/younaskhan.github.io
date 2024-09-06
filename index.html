@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Younas Khan Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Younas Khan</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+			  <li class="nav-item"><a href="#certifications-section" class="nav-link"><span>Certifications</span></a></li> 
+			  <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/file.jpg);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Younas Khan</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Data Analyst  ',
+						'Certified IT Professional  ',
+						'Computer Systems Operator   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>Integrating IT proficiency with analytical skills to optimize business processes.</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/younas-khan-210274244/" class="btn btn-primary py-3 px-4 zoom-effect">LinkedIn</a> 
+							<a href="https://github.com/younaskhano" class="btn btn-white btn-outline-white py-3 px-4 zoom-effect">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    <div class="container">
+        <div class="row">
+            <div class="row d-flex align-items-stretch">
+                <!-- <div class="row d-flex"> -->
+                <div class="col-md-6 col-lg-5 d-flex">
+                    <div class="img-about img d-flex align-items-stretch">
+                        <div class="overlay">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-5">
+                                    <div class="about-img">
+                                        <img src="images/about_me.png" class="img-fluid rounded b-shadow-a zoom-effect" alt="">
+                                    </div>
+                                </div>
+
+
+
+
+
+
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Younas Khan</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Data Analyst</span></p>
+										<p><span class="title-s">Experience: </span> <span>January 2024 - Present</span></p>
+										<p><span class="title-s">Address: </span> <span>Swat, Pakistan</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>SQL</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>PYTHON</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Data Visualization</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Statistical Analysis</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Machine Learning</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>With 2.5 years of professional experience as a Computer Operator  &amp; Freelancing in Data Analytics since January 2024, 
+									I have developed a strong foundation in data analysis and visualization. 
+									As a certified Diploma graduate in Information Technology &amp; currently pursuing a Bachelor's degree in Data Science from Virtual University of Pakistan, 
+									I am skilled in data analysis, Machine Learning, &amp; AI. 
+									I am dedicated to applying my skills and knowledge to drive impactful projects &amp; contribute effectively in the field of data science &amp; analytics.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Data Analytics, Information Technology &amp; Office Operations</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Diploma in Information Technology &amp; Bachelor of Science in Data Science (Pursuing) </span></li>
+									<li class="d-flex"><span>Language:</span> <span>English &amp; Urdu </span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Python, Microsoft PowerBI, MYSQL, Excel, Tableau, Jupyter Notebook &amp; Visual Studio</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Data Visualization, Statistical Analysis, Data Cleaning and Preparation, Business Analysis, Cloud, Python Libraries (Pandas, NumPy, Matplotlib) &amp; Project Management</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Teaching, Cycling, &amp; Gardening</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="30">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://github.com/younaskhano?tab=repositories" class="btn btn-primary py-3 px-3 zoom-effect">GitHub</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+	<section class="ftco-section ftco-no-pb" id="resume-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4">Resume</h2>
+					<p>Data Analyst with 2+ years of experience driving business strategies through data-driven insights. Proven expertise in data science, statistical analysis, machine learning algorithms and project management.</p>
+					<p><a href="https://github.com/younaskhano/My-Resume/blob/main/Younas%20Khan%20-%20Resume.pdf" class="btn btn-primary py-3 px-3 zoom-effect">View Resume</a></p>
+				</div>
+			</div>
+		
+
+
+
+			<div class="row">
+				<h1 class="big-4 text-center">Experience</h1>
+				<div class="underline mx-auto"></div>
+			</div>
+			<br>
+			
+			<div class="row justify-content-center zoom-effect">
+				<div class="col-md-8">
+					<div class="resume-wrap ftco-animate text-center">
+						<span class="date">February, 2022 - July, 2023</span>
+						<h2>Computer Operator</h2>
+						<span class="position">Awami Welfare Society-AWS</span>
+						<p class="mt-4">Awami Welfare Society (AWS) is a humanitarian NGO founded in 1998 by Syed Mahiud-Din, a prominent human rights advocate, particularly for women’s rights, in Swat, Pakistan. AWS is registered under the Ordinance 1961 and focuses on various social issues, healthcare, and education. The organization has partnered with international bodies like USAID and UN Habitat on multiple projects. AWS is recognized for its dedication to social welfare and human rights in the region.</p>
+						<ul class="text-left">
+							<li>Managed and maintained organizational records and databases, ensuring accurate and timely data entry, which improved data accessibility and reporting efficiency by 25%.</li>
+							<li>Streamlined data processing and document management systems, reducing the processing time by 30% through the implementation of automated tools.</li>
+							<li>Coordinated and supported IT infrastructure, ensuring smooth operation of systems during critical project phases, contributing to a 20% increase in overall productivity.</li>
+							<li>Assisted in project monitoring and evaluation, compiling reports and data for ongoing projects, which enhanced project tracking and decision-making processes.</li>
+							<li>Facilitated communication and coordination across departments, optimizing workflow and contributing to the successful execution of multiple NGO initiatives.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<br>
+			<br>
+			
+			<div class="row justify-content-center zoom-effect">
+				<div class="col-md-8">
+					<div class="resume-wrap ftco-animate text-center">
+						<span class="date">August 2023 – July 2024</span>
+						<h2>Computer Operator</h2>
+						<span class="position">ATS Express International - Swat, Pakistan</span>
+						<p class="mt-4">ATS Express International is a logistics company specializing in efficient transportation and supply chain solutions. The company is known for its innovative approaches to logistics management and its commitment to providing reliable services in the region.</p>
+						<ul class="text-left">
+							<li>Created a new system for managing logistics data that accelerated operations and reduced errors, significantly improving operational efficiency.</li>
+							<li>Streamlined data processing and issue resolution processes, enhancing overall workflow and productivity.</li>
+							<li>Implemented workflow improvements that resulted in a more effective data management system, contributing to the company’s growth and operational excellence.</li>
+							<li>Supported day-to-day technical operations and troubleshooting, ensuring minimal downtime and maintaining smooth business operations.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+
+
+
+
+
+		
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="resume-wrap ftco-animate zoom-effect"> <!-- Added zoom-effect class -->
+						<span class="date">2022-2023</span>
+						<h2>Diploma in Computer Science Technology</h2>
+						<span class="position">Science & Technology Development Council, Govt of Khyber Pakhtunkhwa</span>
+						<p class="mt-4">Grade: 'A' class distinction.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row mt-4"> <!-- Added margin-top to separate the sections -->
+				<div class="col-md-12">
+					<div class="resume-wrap ftco-animate zoom-effect"> <!-- Added zoom-effect class -->
+						<span class="date">2025-2028</span>
+						<h2>Bachelors of Science in Data Science</h2>
+						<span class="position">Virtual University Of Pakistan</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+   
+
+
+
+
+
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/younaskhano/Hotel-Bookings-Dashboard/blob/main/dash_board.xlsx" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/younaskhano/Hotel-Bookings-Dashboard/blob/main/dash_board.xlsx">Hotel Bookings Dashboard using Excel</a></h3>
+                <p>This repository contains an Excel dashboard that visualizes hotel booking data. The data was sourced from Kaggle, cleaned and edited using Power Query Editor, and then used to create pivot tables and various interactive graphs. The dashboard includes slicers for easy filtering and data exploration.</p>
+              </div>
+            </div>
+          </div>
+
+
+
+
+		  <div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="https://github.com/younaskhano/e-Commerce-Sales-Data-Analysis" class="block-20 zoom-effect" style="background-image: url('images/ecom.jpg');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://github.com/younaskhano/e-Commerce-Sales-Data-Analysis">e-Commerce (Target) Sales Data Analysis</a></h3>
+			  <p>This repository contains an in-depth analysis of the e-Commerce sales data provided by Target. The dataset includes customer, order, product, payment, and seller information.</p>
+			</div>
+		  </div>
+		</div>
+
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="https://github.com/younaskhano/-Olympics-Dataset-Analysis---Power-BI-Dashboard" class="block-20 zoom-effect" style="background-image: url('images/A.jpg');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://github.com/younaskhano/-Olympics-Dataset-Analysis---Power-BI-Dashboard">Olympics Dataset Analysis</a></h3>
+			  <p>This project focuses on visualizing and analyzing data from the Olympics. The dashboard was created using Microsoft Power BI and provides insights into various aspects of the Olympic Games, such as medal distributions, participation ratios, and top-performing countries.</p>
+			</div>
+		  </div>
+		</div>
+
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="https://github.com/younaskhano/Pizza-Sales-Analysis-Using-SQL" class="block-20 zoom-effect" style="background-image: url('images/B.jpg');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading"><a href="https://github.com/younaskhano/Pizza-Sales-Analysis-Using-SQL">Pizza Sales Analysis Using SQL</a></h3>
+			  <p>Analyzed comprehensive pizza sales data using SQL to uncover key insights into customer preferences, revenue trends, and popular pizza types. This project involved examining total orders, revenue generation, and identifying top-selling pizzas. The analysis aimed to support data-driven decision-making by highlighting sales trends and optimizing business strategies.</p>
+			</div>
+		  </div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		  <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/younaskhano/Titanic-Data-Insight/blob/main/Project_02.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/younaskhano/Titanic-Data-Insight/blob/main/Project_02.ipynb">Titanic Data Insight</a></h3>
+                <p>This project involves data cleaning and exploratory data analysis (EDA) of the Titanic dataset. Using Python libraries like Pandas, NumPy, Matplotlib, and Seaborn. This project showcases my ability to extract meaningful insights from raw data.</p>
+              </div>
+            </div>
+          </div>
+
+
+
+		  <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/younaskhano/Population-Data-Visualization-Analysis./blob/main/Project_01_Population.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/younaskhano/Population-Data-Visualization-Analysis./blob/main/Project_01_Population.ipynb">Population Data Visualization and Analysis</a></h3>
+                <p>This task involved creating a bar chart to visualize population data for the year 2022 across a selected set of countries. The objective was to gain insights into population distribution and comparisons between these countries &amp; Data manipulation using pandas library Data visualization with matplotlib library Script creation for data analysis tasks Knowledge Gained.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+
+
+
+	<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+
+
+
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/younaskhano/Guess-The-Number/blob/main/Guess%20The%20Number.py" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/younaskhano/Guess-The-Number/blob/main/Guess%20The%20Number.py">Guess the Number- Python Project</a></h3>
+				  <p>This Python project implements a fun and engaging "Guess the Number" game. The program generates a random number between 1 and 100, and you (the user) have to guess it within the least number of attempts.</p>
+				</div>
+			  </div>
+			</div>
+
+
+
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/younaskhano/Auto-File-Organizer/blob/main/CodeAlpha-Files-Organizer.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/younaskhano/Auto-File-Organizer/blob/main/CodeAlpha-Files-Organizer.ipynb">Auto File Organizer</a></h3>
+				  <p>The Auto File Organize is a Python script that organize your Downloads folder by automatically sorting files into subfolders by file extension, creating a tidy and navigable structure &amp; It's customizable, saves time, and enhances workflow by automating file organization.</p>
+				</div>
+			  </div>
+			</div>
+
+
+
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/younaskhano/ChatBot-Demo-Project/blob/main/chatbot.py" class="block-20 zoom-effect" style="background-image: url('images/proj_6.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/younaskhano/ChatBot-Demo-Project/blob/main/chatbot.py">Simple text based Chatbot</a></h3>
+				  <p>This is a simple text-based chatbot implemented in Python using the NLTK (Natural Language Toolkit) library. The chatbot can engage in conversations with users, respond to greetings, answer questions, provide assistance, tell jokes, &amp; more..</p>
+				</div>
+			  </div>
+			</div>
+
+
+
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/younaskhano/Pakistan-General-Knowledge-Quiz-/blob/main/Pak_Gen_Knowledge.py" class="block-20 zoom-effect" style="background-image: url('images/proj_7.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/younaskhano/Pakistan-General-Knowledge-Quiz-/blob/main/Pak_Gen_Knowledge.py">Pakistan General Knowledge Quiz</a></h3>
+				  <p>This Python code runs a Pakistan General Knowledge Quiz &amp; Answer 10 multiple-choice questions to test your knowledge and win virtual rupees! Features include tiered prize money and bonus rewards.</p>
+				</div>
+			  </div>
+			</div>
+
+
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/younaskhano/Simple-Calculator/blob/main/Simple_Calculator.py" class="block-20 zoom-effect" style="background-image: url('images/proj_8.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/younaskhano/Simple-Calculator/blob/main/Simple_Calculator.py">Simple Calculator</a></h3>
+				  <p>This user-friendly Python calculator (+, -, *, /) handles integers & decimals, validates input, &amp; offers error messages. It also lets you choose to do another calculation. Great for quick math!</p>
+				</div>
+			  </div>
+			</div>
+
+
+
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/younaskhano/Central-Library-Management/blob/main/Central%20Library.py" class="block-20 zoom-effect" style="background-image: url('images/proj_9.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/younaskhano/Central-Library-Management/blob/main/Central%20Library.py">Central Library Management System</a></h3>
+				  <p>This Python project implements a Central Library Management System that allows users to browse available books, borrow books, and return them. It provides a user-friendly menu-driven interface and basic functionalities for managing the library's book collection.</p>
+				</div>
+			  </div>
+			</div>
+
+
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/younaskhano/rock-paper-scissors-game/blob/main/Rock%2CPaper%20and%20Scissors%20Game.py" class="block-20 zoom-effect" style="background-image: url('images/proj_10.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/younaskhano/rock-paper-scissors-game/blob/main/Rock%2CPaper%20and%20Scissors%20Game.py">Python based Rock, Paper, Scissors game</a></h3>
+				  <p>This Python language based a simple Rock, Paper, Scissors game where you play against the computer. Choose rock, paper, or scissors, and the computer will randomly select its move. The game keeps track of scores, and you can play until the winning score is reached or quit anytime. The code uses the `random` module for computer choices and includes a function to determine the round winner. Enjoy testing your luck against the computer!.</p>
+				</div>
+			  </div>
+			</div>
+
+
+
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/younaskhano/Hangman-Game-Py/blob/main/Hangman%20Game.py" class="block-20 zoom-effect" style="background-image: url('images/proj_11.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/younaskhano/Hangman-Game-Py/blob/main/Hangman%20Game.py">Python based Hangman Game</a></h3>
+				  <p> This Python project brings the classic "Hangman" game to life, allowing users to guess hidden words by suggesting letters. It features a graphical user interface (GUI) for interactive gameplay and includes a .exe executable file for easy access on Windows. The game randomly selects words, tracks incorrect guesses, and visually represents the hangman figure as the game progresses.</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    </section>
+
+
+
+	
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="12">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="11">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="100">0</strong>
+                <span>Mentored Students</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="300">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/younaskhano" class="btn btn-primary py-3 px-5 zoom-effect">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+	<section class="ftco-section" id="certifications-section">
+		<div class="container">
+		  <div class="row justify-content-center mb-5 pb-5">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">Certifications</h1>
+			  <h2 class="mb-4">Certifications</h2>
+			  <p>Below are the certifications I have completed in various fields.</p>
+			</div>
+		  </div>
+		  <div class="row d-flex">
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+				<a href="https://www.linkedin.com/learning/certificates/e06d828f67323d2fe9b6083b446a3089c60b657573fedecc7192f757d6281f00" class="block-20 zoom-effect" style="background-image: url('images/Administrative Professional Foundations_image.jpg'); background-size: contain;">
+				</a>
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a href="https://www.linkedin.com/learning/certificates/e06d828f67323d2fe9b6083b446a3089c60b657573fedecc7192f757d6281f00">Administrative Professional Foundations</a></h3>
+				  <p>Completed on July 2024. Skills covered: Administrative Assistance.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+				<a href="https://www.linkedin.com/learning/certificates/310a2689061c13253727edbbdf31788390f6ed51e5f2821418da65232ddf16ca" class="block-20 zoom-effect" style="background-image: url('images/What is Generative AI_image.jpg'); background-size: contain;">
+				</a>
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a href="https://www.linkedin.com/learning/certificates/310a2689061c13253727edbbdf31788390f6ed51e5f2821418da65232ddf16ca">What Is Generative AI?</a></h3>
+				  <p>Completed on July 2024. Skills covered: Generative AI Tools and Artificial Intelligence (AI).</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry">
+				<a href="https://www.linkedin.com/learning/certificates/74f40c2ef67be2a5d9221bcff6e6b4941e5c1d0f17fc15e440d7d95a7701b82b?trk=share_certificate&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BZQL8bH78Rgu9M1YX8X5upA%3D%3D" class="block-20 zoom-effect" style="background-image: url('images/PowerPoint Essential Training_image.jpg'); background-size: contain;">
+				</a>
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a href="https://www.linkedin.com/learning/certificates/74f40c2ef67be2a5d9221bcff6e6b4941e5c1d0f17fc15e440d7d95a7701b82b?trk=share_certificate&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BZQL8bH78Rgu9M1YX8X5upA%3D%3D">PowerPoint Essential Training (Microsoft 365)</a></h3>
+				  <p>Completed on August 2024. Skills covered: Microsoft PowerPoint.</p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <br>
+		  <!-- Add more rows for additional certifications -->
+		  <div class="row d-flex justify-content-center">
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+				<a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Accenture%20North%20America/hzmoNKtzvAzXsEqx8_Accenture%20North%20America_7S4ZRnWaM45HjtK3L_1721569526006_completion_certificate.pdf" class="block-20 zoom-effect" style="background-image: url('images/Data Analytics and Visualization Job Simulation_image.jpg'); background-size: contain;">
+				</a>
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Accenture%20North%20America/hzmoNKtzvAzXsEqx8_Accenture%20North%20America_7S4ZRnWaM45HjtK3L_1721569526006_completion_certificate.pdf">Data Analytics and Visualization Job Simulation</a></h3>
+				  <p>Completed on July 2024. Skills covered: Project Understanding, Data Cleaning & Modeling, Data Visualization & Storytelling, Presentation Skills.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+				<a href="https://www.example.com" class="block-20 zoom-effect" style="background-image: url('images/Data Analytics using Excel_image.jpg'); background-size: contain;">
+				</a>
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a href="https://www.example.com">Data Analytics using Excel</a></h3>
+				  <p>Completed on May 2024. Skills covered: Data Analysis, Pivot Tables, Data Visualization, VLOOKUP, HLOOKUP, Data Cleaning, Statistical Analysis, Excel Formulas and Functions, Dashboard Creation.</p>
+				</div>
+			  </div>
+		  	</div>
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+				<a href="https://olympus.mygreatlearning.com/courses/10912/certificate" class="block-20 zoom-effect" style="background-image: url('images/Introduction to R_image.jpg'); background-size: contain;">
+				</a>
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a href="https://olympus.mygreatlearning.com/courses/10912/certificate">Introduction to R</a></h3>
+				  <p>Completed on May 2024. Skills covered: R Programming, Data Manipulation, Data Visualization, Statistical Analysis, R Packages, Data Importing and Exporting, Basic Data Structures in R, Exploratory Data Analysis.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				  <a href="https://www.example.com" class="block-20 zoom-effect" style="background-image: url('images/Python Programming Basics_image.jpg'); background-size: contain;">
+				  </a>
+				  <div class="text mt-3 float-right d-block">
+					<h3 class="heading"><a href="https://www.example.com">Python Programming Basics By MaharaTech - ITIMooca</a></h3>
+					<p>Completed on May 2024. Skills covered: Python Syntax and Semantics, Variables and Data Types, Control Structures, Functions, Basic Data Structures , Error Handling, File I/O, Basic Object-Oriented Programming.</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				  <a href="https://www.coursera.org/account/accomplishments/verify/2H5XQHK7LU3N" class="block-20 zoom-effect" style="background-image: url('images/Create a Website Using Wordpress_image.jpg'); background-size: contain;">
+				  </a>
+				  <div class="text mt-3 float-right d-block">
+					<h3 class="heading"><a href="https://www.coursera.org/account/accomplishments/verify/2H5XQHK7LU3N">Create a Website Using Wordpress</a></h3>
+					<p>Completed on December 2023. Skills covered: WordPress, Wordpress Development, Web Development.</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				  <a href="https://www.coursera.org/account/accomplishments/verify/RNX85TXWXZJN" class="block-20 zoom-effect" style="background-image: url('images/Create-and-Design-Digital-Products-using-Canva_image.jpg'); background-size: contain;">
+				  </a>
+				  <div class="text mt-3 float-right d-block">
+					<h3 class="heading"><a href="https://www.coursera.org/account/accomplishments/verify/RNX85TXWXZJN">Create and Design Digital Products using Canva</a></h3>
+					<p>Completed on December 2023. Skills covered: Graphic Design, Canva Interface and Tools, Creating Digital Products, Designing Social Media Graphics, Logo Design, Presentation Design, Custom Templates, Photo Editing, Visual Branding.</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				  <a href="https://www.udemy.com/certificate/UC-49c6c49a-42b9-47c3-8572-53bdf16959ee/?utm_source=sendgrid.com&utm_medium=email&utm_campaign=email" class="block-20 zoom-effect" style="background-image: url('images/Excel For Beginners_image.jpg'); background-size: contain;">
+				  </a>
+				  <div class="text mt-3 float-right d-block">
+					<h3 class="heading"><a href="https://www.udemy.com/certificate/UC-49c6c49a-42b9-47c3-8572-53bdf16959ee/?utm_source=sendgrid.com&utm_medium=email&utm_campaign=email">Excel For Beginners</a></h3>
+					<p>Completed on August 2023. Skills covered: Basic Excel Functions, Data Entry and Formatting, Cell Referencing, Simple Formulas, Basic Charts and Graphs, Sorting and Filtering Data, Introduction to PivotTables, Conditional Formatting, Basic Data Analysis.</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				  <a href="https://www.futurelearn.com/certificates/fd35nn0" class="block-20 zoom-effect" style="background-image: url('images/digital_image.jpg'); background-size: contain;">
+				  </a>
+				  <div class="text mt-3 float-right d-block">
+					<h3 class="heading"><a href="https://www.futurelearn.com/certificates/fd35nn0">DIGITAL SKILLS: ARTIFICIAL INTELLIGENCE</a></h3>
+					<p>Completed on July 2023. Skills covered: Fundamentals of Artificial Intelligence, Machine Learning Basics, AI Algorithms and Models, Data Preparation and Analysis, Introduction to Neural Networks, AI Tools and Technologies, Practical Applications of AI, Ethical Considerations in AI.</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				  <a href="https://www.udemy.com/certificate/UC-47eb686f-681b-45fe-9622-113e3ea9e528/?utm_source=sendgrid.com&utm_medium=email&utm_campaign=email" class="block-20 zoom-effect" style="background-image: url('images/Microsoft Excel by Start Tech Academy_image.jpg'); background-size: contain;">
+				  </a>
+				  <div class="text mt-3 float-right d-block">
+					<h3 class="heading"><a href="https://www.udemy.com/certificate/UC-47eb686f-681b-45fe-9622-113e3ea9e528/?utm_source=sendgrid.com&utm_medium=email&utm_campaign=email">Microsoft Excel by Start Tech Academy</a></h3>
+					<p>Completed on August 2023. Skills covered: Advanced Excel Functions, Complex Formulas, Data Analysis and Visualization, PivotTables and PivotCharts, Advanced Data Filtering and Sorting, Macro Creation and VBA Basics, Dashboard Design, Data Validation, Conditional Formatting.</p>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		</div>
+	  </section>
+	  
+
+
+	  
+
+
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p> Swat, Pakistan</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+92 3460655907</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">lyounaskhanl9@gmail.com</a></p>
+	          </div>
+          </div>
+
+
+		  <head>
+			<!-- Font Awesome CDN -->
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+			<!-- Your existing CSS files -->
+		  </head>
+
+
+
+
+		  <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+			<div class="align-self-stretch box p-4 text-center">
+			  <div class="icon d-flex align-items-center justify-content-center">
+				<span class="fab fa-linkedin"></span> <!-- Updated LinkedIn icon -->
+			  </div>
+			  <h3 class="mb-4">LinkedIn</h3>
+			  <p><a href="https://www.linkedin.com/in/younas-khan-210274244/">View LinkedIn Profile</a></p>
+			</div>
+		  </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/ydK6kXWZANqYtf5Q8" class="btn btn-primary py-3 px-5 zoom zoom-effect">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/younas-khan-210274244/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://www.facebook.com/lyounaskhanl9"><span class="icon-facebook"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
